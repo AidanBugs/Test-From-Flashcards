@@ -298,11 +298,7 @@ def get_csv_files():
         print("Created 'data' folder. Please add your CSV files there.")
         return []
     
-    # Find all CSV files
     csv_files = list(data_folder.glob("*.csv"))
-    
-    # Also look for CSV files with different casing
-    csv_files.extend(data_folder.glob("*.CSV"))
     
     return sorted(csv_files)
 
